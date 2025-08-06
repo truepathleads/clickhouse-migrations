@@ -137,7 +137,7 @@ ORDER BY tuple(created_at)"""
                     [
                         {
                             "version": migration.version,
-                            "script": migration.script,
+                            "script": "",
                             "md5": migration.md5,
                         }
                     ],
@@ -153,7 +153,7 @@ ORDER BY tuple(created_at)"""
                     [
                         {
                             "version": migration.version,
-                            "script": migration.script,
+                            "script": "",
                             "md5": migration.md5,
                         }
                     ],
