@@ -94,10 +94,11 @@ class ClickhouseCluster:
         dryrun: bool = False,
         explicit_migrations: Optional[List[str]] = None,
         fake: bool = False,
+        md5_source_path: Optional[Union[Path, str]] = None,
     ):
         db_name = db_name if db_name is not None else self.default_db_name
 
-        storage = MigrationStorage(migration_path)
+        storage = MigrationStorage(migration_path, md5_source_dir=md5_source_path)
         migrations = storage.migrations(explicit_migrations)
 
         return self.apply_migrations(
